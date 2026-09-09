@@ -1,7 +1,7 @@
+import Input from "./components/Input";
+
 const app = () => {
-  return (
-    <p className="bg-blue-500">Felipe</p>
-  )
-}
+  return <Input />;
+};
 
 export default app;
