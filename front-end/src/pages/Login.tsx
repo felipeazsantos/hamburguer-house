@@ -1,15 +1,13 @@
 import { useState } from "react";
-import Input from "./components/Input";
+import Input from "../components/Input";
 
-const Register = () => {
-  const [name, setName] = useState("");
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [cep, setCEP] = useState("");
 
   function onSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
+    console.log(email, password);
   }
 
   return (
@@ -18,12 +16,6 @@ const Register = () => {
         <img src="./logo.png" alt="Casa do Hambuguer - Logo" className="mb-4" />
         <Input
           type="text"
-          placeholder="Nome"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <Input
-          type="email"
           placeholder="E-mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -34,13 +26,6 @@ const Register = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Input
-          type="password"
-          placeholder="Confirme sua Senha"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-        />
-        <Input type="text" placeholder="CEP" value={cep} onChange={(e) => setCEP(e.target.value)} />
         <button className="mt-2 w-full cursor-pointer rounded-sm bg-[#C92A0E] py-1 text-sm font-bold text-white">
           Entrar
         </button>
@@ -52,4 +37,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;
