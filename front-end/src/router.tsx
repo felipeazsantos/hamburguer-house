@@ -6,7 +6,7 @@ import { createBrowserRouter, Outlet } from "react-router";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col bg-[#161410] text-white">
       <Header />
       <Outlet />
     </div>

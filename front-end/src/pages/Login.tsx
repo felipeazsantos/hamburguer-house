@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "../components/Input";
 import { Link } from "react-router";
+import Button from "../components/Button";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -29,12 +30,12 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="mt-2 w-full cursor-pointer rounded-sm bg-[#C92A0E] py-1 text-sm font-bold text-white">
-          Entrar
-        </button>
-        <button className="w-full cursor-pointer rounded-sm bg-white py-1 text-sm font-bold text-[#C92A0E]">
-          Não tenho conta
-        </button>
+        <Link to="#" className="w-full">
+          <Button title="Login" />
+        </Link>
+        <Link to="/register" className="w-full">
+          <Button title="Não tenho conta" variant="outline" />
+        </Link>
       </div>
     </form>
   );
